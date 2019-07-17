@@ -1,0 +1,1002 @@
+body, textarea {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "Icons";
+    src: url('../fonts/icon/icons.eot');
+    src: url('../fonts/icon/icons.eot?#iefix-rdmvgc') format('embedded-opentype'), url('../fonts/icon/icons.woff') format('woff'), url('../fonts/icon/icons.ttf') format('truetype'), url('../fonts/icon/icons.svg?-rdmvgc#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*
+-------------------------------------------------------------------
+COLOR SETTING
+-------------------------------------------------------------------
+*/
+.light, .light h1, .light h2, .light h3, .light h4, .light h5, .light h6, .light p, .light .btn-text, .light .btn-text:hover, .light .btn a, .light .btn:hover, nav.light a, .light .glide__arrow, .light .counter .value span:last-child, .light.counter .value span:last-child {
+    color: #FFF !important;
+}
+
+/*
+-------------------------------------------------------------------
+GLOBAL - SECTION
+-------------------------------------------------------------------
+*/
+
+main > section {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+main > section.section-base {
+    background-color: #FFF;
+}
+
+main > section > .container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.align-center {
+    text-align: center;
+}
+
+@media (min-width: 994px) {
+    .section-full-width-right > .container > .row > .col-lg-6:last-child {
+        position: absolute;
+        left: 50%;
+    }
+
+    .section-full-width-right > .container > .row > .col-lg-8:last-child {
+        position: absolute;
+        left: 66.666667%;
+    }
+
+    .section-full-width-left > .container > .row > .col-lg-6:first-child {
+        position: absolute;
+        right: 50%;
+    }
+
+    .section-full-width-left > .container > .row {
+        direction: rtl;
+        text-align: left;
+    }
+
+    .section-full-width-left > .container > .row > div, .section-full-width-right > .container > .row > div {
+        direction: ltr;
+    }
+
+    main .section-full-width-left > .container, main .section-full-width-left > .container {
+        position: static;
+    }
+}
+
+/*
+-------------------------------------------------------------------
+IMAGE - SECTION
+-------------------------------------------------------------------
+*/
+
+.section-image {
+    background-size: cover;
+    background-position: center center;
+}
+
+/*
+# NAVIGATION
+===================================================================
+
+-------------------------------------------------------------------
+GLOBAL
+-------------------------------------------------------------------
+
+*/
+
+body > nav {
+    z-index: 995;
+    position: relative;
+    background-color: #FFF;
+}
+
+body > nav > .container {
+    height: 100%;
+}
+
+body > nav .menu-brand {
+    float: left;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    z-index: 9999;
+    position: relative;
+}
+
+body > nav .menu-brand > a {
+    height: 100%;
+}
+
+body > nav .menu-brand img {
+    max-height: 100%;
+    display: block;
+}
+
+.menu-btn {
+    display: none;
+    width: 30px;
+    height: 30px;
+    font-style: normal;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.menu-btn:before {
+    content: "\64";
+    font-family: "Icons";
+    position: absolute;
+    left: 0;
+    text-transform: none;
+}
+
+.menu-right {
+    float: right;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin: 0 -15px;
+}
+
+.menu-cnt {
+    position: relative;
+}
+
+.menu-cnt > ul, .menu-inner > ul {
+    float: left;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    margin-left: 30px;
+}
+
+.menu-cnt > ul > li > a, .dropdown > ul > li > a, .dropdown-submenu > ul > li > a {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 15px;
+    font-size: 13px;
+    display: block;
+}
+
+.menu-cnt ul > li > a {
+    text-decoration: none;
+    transition: all .5s, height 0s, line-height 0s;
+}
+
+.menu-cnt > ul > li a {
+    color: #444;
+    text-decoration: none;
+    text-align: left;
+}
+
+.menu-right > * {
+    margin: 0 15px;
+}
+
+nav.light h5, .menu-cnt li.dropdown-submenu > a {
+    color: #4C4C4C;
+}
+
+body > nav .icon-links a i {
+    font-size: 16px;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.menu-cnt li > a {
+    position: relative;
+}
+
+/*
+-------------------------------------------------------------------
+MENU RIGHT POSITION - NAVIGATION MENU
+-------------------------------------------------------------------
+*/
+
+nav.align-right .menu-cnt {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav.align-right .menu-cnt {
+    float: none;
+}
+
+/*
+-------------------------------------------------------------------
+MENU TRANSPARENT - NAVIGATION MENU
+-------------------------------------------------------------------
+*/
+
+body > nav.menu-transparent, .menu-transparent .menu-cnt > ul > li:hover > a {
+    background: none;
+}
+
+.menu-fixed.scroll-menu {
+    opacity: 1;
+    top: 0;
+    transition: opacity .5s, top .5s;
+    animation: anima-menu-down 2s;
+}
+
+/*
+-------------------------------------------------------------------
+MENU FIXED - NAVIGATION MENU
+-------------------------------------------------------------------
+*/
+
+nav.menu-fixed {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+.menu-fixed.scroll-menu .menu-cnt > ul > li > a, .menu-fixed.scroll-menu .menu-brand, .menu-fixed.scroll-menu .menu-right {
+    height: 65px;
+    line-height: 65px;
+}
+
+/*
+
+# HEADERS
+===================================================================
+
+-------------------------------------------------------------------
+GLOBAL
+-------------------------------------------------------------------
+
+*/
+
+.title {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.title > p {
+    margin-top: 15px;
+}
+
+/*
+
+# TYPOGRAPHY
+===================================================================
+ 
+-------------------------------------------------------------------
+SPACE
+-------------------------------------------------------------------
+
+*/
+
+hr.space, hr.space-xs, hr.space-sm, hr.space-md, hr.space-lg {
+    border: none;
+    clear: both;
+    margin: 0;
+}
+
+hr.space-xs {
+    height: 15px;
+}
+
+hr.space-sm {
+    height: 30px;
+}
+
+hr.space {
+    height: 60px;
+}
+
+hr.space-lg {
+    height: 100px;
+}
+
+/*
+-------------------------------------------------------------------
+TEXT
+-------------------------------------------------------------------
+*/
+
+.text-md {
+    font-size: 25px !important;
+    line-height: 35px;
+}
+
+.text-lg {
+    font-size: 50px !important;
+    line-height: 70px;
+}
+
+/*
+-------------------------------------------------------------------
+QUOTE
+-------------------------------------------------------------------
+*/
+
+.quote {
+    position: relative;
+    padding: 30px 30px 30px 105px;
+    margin: 0;
+    border-radius: 3px;
+}
+.quote:before, .quote.quote-double:after {
+    content: "\65";
+    font-family: "Icons";
+    position: absolute;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    font-size: 45px;
+    line-height: 55px;
+    opacity: .2;
+    text-transform: none;
+}
+
+.quote .quote-author {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+/*
+
+# COMPONENTS
+===================================================================
+ 
+-------------------------------------------------------------------
+BUTTONS - COMPONENT
+-------------------------------------------------------------------
+
+*/
+
+.btn {
+    color: #fff;
+    border-radius: 3px;
+    display: inline-block;
+    text-decoration: none;
+    border-style: solid;
+    border-width: 1px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    transition: all .5s;
+}
+
+.btn-xs {
+    padding: 7px 20px;
+    font-size: 13px;
+}
+
+.btn-sm {
+    padding: 10px 30px;
+    font-size: 15px;
+}
+
+.btn-border, body .btn-border {
+    background: none;
+}
+
+.btn-circle {
+    border-radius: 100px;
+}
+
+.btn-video {
+    position: relative;
+    display: block;
+    padding-top: 60px;
+    text-decoration: none;
+}
+
+.btn-video:before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: -43px;
+    background: #FFF;
+    z-index: 1;
+}
+
+.btn-video:after {
+    content: "\62";
+    font-family: "Icons";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    font-size: 45px;
+    line-height: 55px;
+    top: 0;
+    left: 50%;
+    margin-left: -24px;
+    animation-iteration-count: infinite;
+    z-index: 1;
+    text-transform: none;
+}
+
+.img-box.btn-video {
+    padding-top: 0;
+}
+
+.img-box.btn-video:after {
+    top: 50%;
+    margin-top: -30px;
+}
+
+/*
+-------------------------------------------------------------------
+SOCIAL LINK - COMPONENT
+-------------------------------------------------------------------
+*/
+.social-colors.icon-links-button i, .social-colors.icon-links-grid i, .social-colors-hover.icon-links-button i, .social-colors-hover.icon-links-grid i {
+    transition: none;
+}
+
+.social-colors.icon-links-button .facebook:not(:hover), .social-colors-hover.icon-links-button .facebook:hover,
+.social-colors.icon-links-grid .facebook:not(:hover), .social-colors-hover.icon-links-grid .facebook:hover {
+    background-color: #3B5998;
+    border-color: #3B5998;
+    color: #FFF;
+}
+
+.social-colors.icon-links-button .twitter:not(:hover), .social-colors-hover.icon-links-button .twitter:hover,
+.social-colors.icon-links-grid .twitter:not(:hover), .social-colors-hover.icon-links-grid .twitter:hover {
+    background-color: #3B8ACA;
+    border-color: #3B8ACA;
+    color: #FFF;
+}
+
+.social-colors.icon-links-button .youtube:not(:hover), .social-colors-hover.icon-links-button .youtube:hover,
+.social-colors.icon-links-grid .youtube:not(:hover), .social-colors-hover.icon-links-grid .youtube:hover {
+    background-color: #cc181e;
+    border-color: #cc181e;
+    color: #FFF;
+}
+
+.social-colors.icon-links-button .instagram:not(:hover), .social-colors-hover.icon-links-button .instagram:hover,
+.social-colors.icon-links-grid .instagram:not(:hover), .social-colors-hover.icon-links-grid .instagram:hover {
+    background-color: #464646;
+    border-color: #464646;
+    color: #FFF;
+}
+
+/*
+-------------------------------------------------------------------
+ICON LINK - COMPONENT
+-------------------------------------------------------------------
+*/
+
+.icon-links {
+    display: flex;
+}
+
+.icon-links a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+.icon-links a i {
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    margin: 0;
+    padding: 0;
+    display: block;
+    position: absolute;
+    font-size: 18px;
+    transition: all .5s;
+}
+
+.icon-links {
+    display: flex;
+}
+
+.icon-links-grid a {
+    border-style: solid;
+    border-width: 1px;
+    border-right: none;
+    width: 50px;
+    height: 40px;
+    margin: 0;
+}
+
+.icon-links-grid a i {
+    transition: all .1s;
+}
+
+.icon-links-grid a:first-child {
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+.icon-links-grid a:last-of-type {
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+/* 
+
+# ICONS
+===================================================================
+
+*/
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    font-family: "Icons";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-transform: none;
+}
+
+.icon-facebook:before {
+    content: "\6b";
+}
+
+.icon-twitter:before {
+    content: "\6f";
+}
+
+.icon-instagram:before {
+    content: "\70";
+}
+
+.icon-youtube:before {
+    content: "\73";
+}
+
+/*
+-------------------------------------------------------------------
+ICON BOX - COMPONENT
+-------------------------------------------------------------------
+*/
+
+.icon-box {
+    position: relative;
+    display: flex;
+}
+
+.icon-box h3 {
+    font-size: 20px;
+}
+
+.icon-box p {
+    margin: 0;
+}
+
+.icon-box-top {
+    flex-direction: column;
+}
+
+.icon-box-top h3 {
+    margin: 20px 0 10px 0;
+}
+
+/*
+
+# CONTACT FORM
+===================================================================
+
+*/
+
+.input-text, .input-select, .input-textarea {
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    background: rgb(255, 255, 255);
+}
+
+.form-box > .space.xs {
+    height: 12px;
+}
+
+.form-box.text-center input, .form-box.text-center textarea, .form-box.text-center select {
+    text-align: center;
+}
+
+.form-box p {
+    margin: 0 0 10px 0;
+}
+
+.form-box textarea, .form-box select, .form-box input {
+    margin: 0 0 20px 0;
+    transition: all .5s;
+}
+
+.form-inline .btn {
+    white-space: nowrap;
+    width: 100%;
+}
+
+/*
+
+# Content Box
+===================================================================
+
+*/
+
+.cnt-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.cnt-box .caption h2 {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.cnt-box .caption p {
+    font-size: 15px;
+    margin: 0;
+}
+
+
+.cnt-box-info {
+    position: relative;
+}
+
+.cnt-box-info .cnt-info {
+    padding: 15px 0;
+}
+
+.cnt-box-info .cnt-info > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cnt-box-info .caption {
+    padding-top: 30px;
+}
+
+.cnt-box-info .bottom-info {
+    padding: 15px 0 0 0;
+}
+
+.cnt-box-info .extra-field {
+    position: absolute;
+    z-index: 1;
+    margin: 15px;
+}
+
+/*
+-------------------------------------------------------------------
+TABLE - COMPONENT
+-------------------------------------------------------------------
+*/
+
+.table {
+    width: 100%;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+
+.table th {
+    font-weight: 600;
+}
+
+.table th, .table td {
+    text-align: left;
+    padding: 5px 10px;
+}
+
+.table-border td, .table-border th, .table-full-border td, .table-full-border th {
+    border-style: solid;
+    border-width: 1px;
+    border-right: none;
+    border-top: none;
+    padding: 10px;
+}
+
+.table-border tbody tr td:first-child, .table-border thead tr:first-child th:first-child {
+    border-left: none;
+    padding-left: 0;
+}
+
+.table-border tbody tr:last-child td {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/*
+-------------------------------------------------------------------
+IMAGE BOX - COMPONENT
+-------------------------------------------------------------------
+*/
+
+.img-box {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    border-radius: 3px;
+    transition: all .5s;
+}
+
+.img-box:before {
+    content: "";
+    opacity: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    background: #000;
+    position: absolute;
+    border-radius: 4px;
+    transition: all .5s;
+}
+
+.img-box img {
+    max-width: 100%;
+    display: block;
+    position: relative;
+    border-radius: 3px;
+    transition: all .5s;
+}
+
+img {
+    max-width: 100%;
+    display: inline-block;
+}
+
+/* 
+
+# FOOTER
+===================================================================
+
+*/
+
+footer > .container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.footer-bar {
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+.footer-bar > .container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 12px;
+    letter-spacing: .5px;
+}
+
+.footer-bar > .container > span:last-child {
+    float: right;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+/*
+
+# RESPONSIVE
+===================================================================
+
+-------------------------------------------------------------------
+Large devices (desktops, less than 1200px)
+-------------------------------------------------------------------
+
+*/
+
+@media (max-width: 1199.98px) {
+    .hidden-lg {
+        display: none !important;
+    }
+
+    [data-columns-lg='1'] > div {
+        grid-template-columns: 1fr;
+    }
+
+    [data-columns-lg='2'] > div {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    [data-columns-lg='3'] > div {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    [data-columns-lg='4'] > div {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+/*
+-------------------------------------------------------------------
+Medium devices (tablets, less than 992px)
+-------------------------------------------------------------------
+*/
+
+@media (max-width: 991.98px) {
+
+    /*
+    -------------------------------------------------------------------
+    Layout
+    -------------------------------------------------------------------
+    */
+
+    [class*=col-lg-] + [class*=col-lg-] {
+        margin-top: 30px;
+    }
+
+    .col-md-6 + .col-md-6 + .col-md-6 {
+        margin-top: 30px;
+    }
+
+    .col-md-6 + .col-md-6, .col-md-4 + .col-md-4 {
+        margin-top: 0;
+    }
+
+    /*
+    -------------------------------------------------------------------
+    Responsive classes
+    -------------------------------------------------------------------
+    */
+
+    .no-margin-md {
+        margin: 0 !important;
+    }
+
+    [class*=col-lg-] + [class*=col-lg-].no-margin-md, .full-width-md + .full-width-md {
+        margin-top: 15px !important;
+    }
+
+    .full-width-md {
+        width: 100% !important;
+    }
+
+    .hidden-md {
+        display: none !important;
+    }
+
+    /*
+    -------------------------------------------------------------------
+    Components
+    -------------------------------------------------------------------
+    */
+
+    .form-box [class*=col-lg-] + [class*=col-lg-] {
+        margin-top: 0 !important;
+    }
+
+    form.form-inline .btn {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .table-6-md td, .table-6-md th {
+        display: block;
+        border-top: none;
+        border-bottom: none;
+    }
+
+    .table-6-md tr {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .table-6-md td:nth-child(2n+1) {
+        border-left: none;
+    }
+
+    /*
+    -------------------------------------------------------------------
+    Sections
+    -------------------------------------------------------------------
+    */
+
+    .section-map > .container {
+        max-width: 360px;
+    }
+
+    /*
+    -------------------------------------------------------------------
+    Navigation
+    -------------------------------------------------------------------
+    */
+
+    body > nav {
+        height: 50px;
+    }
+
+    body > nav .menu-brand {
+        max-width: calc(100% - 60px);
+    }
+
+    body > nav .menu-brand > a {
+        display: flex;
+        align-items: center;
+    }
+
+    body > nav > .container, body > .menu-mini > .container {
+        max-width: 100%;
+    }
+
+    .menu-btn {
+        display: block;
+        z-index: 9999;
+    }
+
+    .dropdown-submenu > a:after, .menu-side:not(.menu-side-collapse) li > a:after {
+        transform: translateY(-50%) rotate(90deg);
+    }
+
+    .menu-cnt > ul > li > a, .dropdown > ul > li > a, .dropdown-submenu > ul > li > a {
+        padding: 0 30px;
+    }
+
+    .menu-cnt {
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 100%;
+        background: #FFF;
+        left: 0;
+        width: 100%;
+        transition: height .5s;
+        display: block;
+    }
+
+    nav.light .menu-cnt a {
+        color: rgb(68, 68, 68) !important;
+    }
+
+    nav.align-right .menu-cnt {
+        display: block;
+    }
+
+    body > nav.menu-fixed .menu-cnt {
+        overflow-y: scroll;
+    }
+
+    .menu-cnt > ul, .menu-cnt > .menu-right {
+        float: none;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .menu-cnt > ul {
+        margin: 0;
+    }
+
+}

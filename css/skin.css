@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,600,700,800');
+
+/*
+-------------------------------------------------------------------
+COLORS
+-------------------------------------------------------------------
+*/
+
+body, header h2, h1, h2, h3, h4, h5, h6, .input-text, .input-select, .input-textarea, .icon-list span, .icon-list span a, .social-links a i, .glide__arrow, .list-nav a {
+    color: #13304a;
+}
+
+div.cnt-box-info .cnt-info, footer {
+    background-color: #13304a;
+}
+
+body > nav.scroll-menu:before, .title > p:before, .title > p:after, .quote .quote-author:before, .cnt-box-info .extra-field, .glide__bullets > button:hover, .glide__bullets > button.glide__bullet--active, .controls-right .glide__bullet, .media-box-reveal .extra-field, .media-box .caption h3:before, .bg-color, body main > section.bg-color, nav .dropdown > ul > li > a, body > header h2:after, body > header h2:before, .controls-out.arrows-left .glide__arrow:hover, .menu-cnt > ul > li > ul li > a, .section-home-alpins .glide__arrow {
+    background-color: #379cf4;
+}
+
+.btn, .icon-links-grid a:hover, .icon-links-button a {
+    background-color: #379cf4;
+    border-color: #379cf4;
+}
+
+a, .counter .value span:last-child, .icon-box i, .cnt-box-info .cnt-info > div > span:last-child, .cnt-box-info .bottom-info, .btn-text, .menu-cnt > ul > li:hover > a, nav:not(.menu-transparent) .menu-cnt > ul > li:hover > a, .cnt-box-team:hover .caption h2, .cnt-box-top-icon > i, .datepicker-panel > ul > li:hover, .extra-field:before, .menu-inner li.active > a, .menu-inner li:hover > a, .table-alpins td:first-child, .accordion-list > li > a:before, .cnt-box-blog-side .icon-list i, .cnt-box-blog-top .icon-list i, .list-nav a:before, .cnt-box .caption p b, .cnt-box-side-icon > i, .countdown h3, .countdown p, nav:not(.menu-transparent) .menu-mini .lan-menu > li:hover > a, nav .icon-list li > i {
+    color: #379cf4;
+}
+
+form.form-box textarea:focus, form.form-box select:focus, form.form-box input:focus, [data-parallax] .table td, .media-box-half .caption .extra-field + p, .timeline > div .panel, div.timeline > div.inverted .panel:last-child, .search-box-menu > input[type=text]:focus {
+    border-color: #379cf4;
+}
+
+body > header.align-center h2, .light .breadcrumb li:last-child a, .cnt-box-testimonials-bubble > p, .footer-bar > .container {
+    color: rgb(238, 243, 247) !important;
+}
+
+::placeholder {
+    color: rgba(19, 48, 74, 0.52);
+}
+
+.table, .table td, .table th, .accordion-list > li, .table tr {
+    border-color: rgba(83, 98, 111, .3);
+}
+
+.controls-out.arrows-left .glide__arrow, form.form-box textarea, form.form-box select, form.form-box input, .cnt-box.boxed, .tab-nav li a, .text-list-image li > img, .pagination li.page a, .shop-menu-cnt .shop-menu {
+    box-shadow: 0 3px 23px rgba(39,79,117,.15);
+}
+
+.img-box, .media-box, .cnt-box-info .img-box, .section-block-full > .container > .row > .col:first-child, .cnt-call, .datepicker-top-left, .datepicker-top-right, .cnt-pricing-table, .google-map, .search-box-menu > input[type=text] {
+    box-shadow: 0 10px 60px -12px rgba(39,79,117,.25);
+}
+
+/*
+-------------------------------------------------------------------
+CUSTOM CLASSES
+-------------------------------------------------------------------
+*/
+
+.table-grid td .icon-box {
+    transition: all .2s;
+}
+
+/*
+-------------------------------------------------------------------
+LAYOUT & TYPOGRAPHY
+-------------------------------------------------------------------
+*/
+
+body, textarea {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 + p, h2 + p, p + .btn, p + .btn-text, p + table, p + pre, p + img, p + .row, p + .img-box, p + .media-box, p + .cnt-box, p + .hc-icon-links, p + ul.icon-list, .container > .row + .row, .container > div + p, .container > div + .btn, .table + .btn, .table + .btn-text {
+    margin-top: 40px;
+}
+
+.title {
+    margin-bottom: 40px;
+}
+
+hr.space {
+    height: 80px;
+}
+
+.title > h2 {
+    font-size: 30px;
+    line-height: 45px;
+    margin-top: -5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+.title > p {
+    display: inline-block;
+    white-space: nowrap;
+    padding: 0 45px 0 0;
+    position: relative;
+    overflow: hidden;
+    font-size: 16px;
+    transition: padding .5s;
+}
+
+.title.align-center > p {
+    padding-left: 45px;
+}
+
+.title.align-center > p:before, .title > p:after, .media-box .caption h3:before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 6px;
+    border-radius: 4px;
+    left: 0;
+    top: 12px;
+    transition: all
+}
+
+.title > p:after {
+    left: auto;
+    right: 0;
+}
+
+.text-lg:not([data-to]) {
+    font-size: 65px !important;
+    line-height: 89px;
+}
+
+.quote {
+    background: none;
+    padding: 0 0 60px 0;
+}
+
+.quote:before {
+    display: none;
+}
+
+.quote .quote-author:before {
+    content: "";
+    right: -45px;
+    top: 11px;
+    height: 6px;
+    border-radius: 3px;
+    width: 30px;
+    position: absolute;
+}
+
+.quote .quote-author {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+/*
+-------------------------------------------------------------------
+HEADER AND MENUS
+-------------------------------------------------------------------
+*/
+body > nav .menu-brand, .menu-icon-top .menu-brand {
+    height: 95px;
+    padding: 15px 0;
+}
+
+.menu-cnt > ul > li a, .lan-menu a {
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.menu-cnt ul > li:first-child > a, .menu-mini ul > li:first-child > a {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.menu-cnt ul > li:last-child > a, .menu-mini ul > li:last-child > a {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+body > .menu-classic.menu-transparent:not(.scroll-menu) {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.15) 70%,rgba(0,0,0,0) 100%);
+}
+
+body > nav, .menu-cnt > ul > li:hover > a, .lan-menu > li > a, nav:not(.menu-transparent) .lan-menu > li:hover > a {
+    background: none;
+}
+
+body > nav:before {
+    content: "";
+    height: calc(100% - 25px);
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    background-color: #FFF;
+    z-index: -1;
+}
+
+body > nav.menu-transparent:not(.scroll-menu):before {
+    display: none;
+}
+
+body > nav .menu-cnt > ul > li > a, body > nav .lan-menu > li > a, body > nav .menu-right {
+    height: 95px;
+    line-height: 95px;
+    padding-bottom: 25px;
+    box-sizing: content-box;
+}
+
+main > section.section-color {
+    background-color: rgb(238, 243, 247);
+}
+/*
+-------------------------------------------------------------------
+FOOTER
+-------------------------------------------------------------------
+*/
+
+.footer-bar {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-bar a {
+    text-decoration: none;
+}
+
+.footer-bar span:last-child a {
+    color: #FFF;
+    margin: 0 5px;
+}
+
+footer li, footer p {
+    opacity: .9;
+}
+
+/*
+-------------------------------------------------------------------
+COMPONENTS
+-------------------------------------------------------------------
+*/
+
+.counter h3 {
+    font-weight: 500;
+    margin: 0;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.counter .value {
+    font-weight: 700;
+}
+
+.counter .value span:last-child {
+    margin-left: 5px;
+}
+
+.btn {
+    font-weight: 600;
+}
+
+.icon-box h3 {
+    font-size: 16px;
+}
+
+.icon-box i {
+    font-size: 50px;
+}
+
+.section-image .icon-box h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.icon-box p {
+    line-height: 25px;
+}
+
+.btn-xs {
+    font-size: 14px;
+    padding: 7px 30px;
+}
+
+.cnt-box-info .cnt-info {
+    position: absolute;
+    top: 0;
+    color: #FFF;
+    background: #000;
+    width: calc(100% - 30px);
+    margin: -30px 0 0 0;
+    padding: 17px 30px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.cnt-box-info .cnt-info > div {
+    flex-direction: column-reverse;
+}
+
+.cnt-box-info .cnt-info > div > span:last-child {
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 15px
+}
+
+.cnt-box-info .cnt-info > div > span:first-child {
+    font-size: 12px;
+    margin-top: 10px;
+    line-height: 15px;
+    opacity: .8;
+    font-weight: 500;
+}
+
+.cnt-box-info .caption, .cnt-box-info.boxed .caption {
+    position: relative;
+    padding-top: 90px;
+}
+
+.cnt-box-info .bottom-info {
+    position: relative;
+    padding-left: 45px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.cnt-box-info .bottom-info:before {
+    content: "\6c";
+    font-family: "Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    position: absolute;
+    left: 1px;
+    font-size: 22px;
+}
+
+.cnt-box-info .extra-field, .media-box-reveal .extra-field {
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: .5px;
+    padding: 0 10px;
+    border-radius: 3px;
+}
+
+.cnt-box-info .caption h2 {
+    font-size: 22px;
+}
+
+.cnt-box-info .caption > p {
+    padding: 15px 0;
+}
+
+ul.icon-list li {
+    margin: 0;
+}
+
+/*
+-------------------------------------------------------------------
+CONTAINERS
+-------------------------------------------------------------------
+*/
+
+.controls-out .glide__bullets {
+    justify-content: space-between;
+    border-radius: 3px;
+}
+
+.light .controls-out .glide__bullets {
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+.controls-out .glide__bullet {
+    width: 100%;
+    border-radius: 0;
+    margin: 0 1px;
+    height: 6px;
+    border-radius: 3px;
+    opacity: 0;
+}
+
+.glide__bullets > button {
+    opacity: .6;
+}
+
+/*
+-------------------------------------------------------------------
+RESPONSIVE
+-------------------------------------------------------------------
+
+Large devices (desktops, less than 1200px)
+-------------------------------------------------------------------
+*/
+
+@media (max-width: 1199.98px) {
+    .text-lg:not([data-to]) {
+        font-size: 55px !important;
+        line-height: 75px;
+    }
+}
+
+/*
+Medium devices (tablets, less than 992px)
+-------------------------------------------------------------------
+*/
+
+@media (max-width: 991.98px) {
+    body > nav {
+        height: 96px;
+    }
+
+    body > nav:before {
+        height: 100%;
+    }
+
+    body > nav .menu-cnt > ul > li > a, body > nav .lan-menu > li > a, body > nav .menu-right, .menu-fixed.scroll-menu .menu-cnt > ul > li > a, .menu-fixed.scroll-menu .menu-brand, body > nav.scroll-menu .lan-menu > li > a {
+        height: 50px;
+        line-height: 50px;
+        padding-bottom: 0;
+    }
+
+    .menu-cnt ul:not(.tab-nav) > li:first-child > a, .menu-cnt ul:not(.tab-nav) > li:last-child > a {
+        border-radius: 0;
+    }
+
+    .width-50 {
+        max-width: 100%;
+    }
+
+    .controls-out.controls-right {
+        margin-bottom: 45px;
+    }
+
+    [class*=col-lg-] + [class*=col-lg-] {
+        margin-top: 60px;
+    }
+
+    .footer-bar > .container > span:last-child {
+        display: none;
+    }
+
+    body > nav.scroll-menu {
+        height: 65px;
+    }
+
+    nav.scroll-menu .menu-cnt {
+        background-color: #379cf4;
+    }
+
+    nav.active .menu-cnt {
+        padding-top: 15px;
+        border-top: 1px solid rgb(230, 230, 230);
+    }
+
+    body > nav:not(.menu-side).scroll-menu .menu-cnt > ul > li > a {
+        color: #FFF !important;
+    }
+
+    .menu-cnt ul:not(.tab-nav) > li:last-child > a:last-child {
+        padding-bottom: 10px
+    }
+}
+
+/*
+Small devices (landscape phones, less than 768px)
+-------------------------------------------------------------------
+*/
+
+@media (max-width: 767.98px) {
+    [class*=col-]:not([class*=col-sm]) + [class*=col-]:not([class*=col-sm]) {
+        margin-top: 60px;
+    }
+}
+
+/*
+Extra small devices (portrait phones, less than 576px)
+-------------------------------------------------------------------
+*/
+
+@media (max-width: 575.98px) {
+    .text-lg:not([data-to]) {
+        font-size: 35px !important;
+        line-height: 45px;
+    }
+
+    .title > p {
+        max-width: calc(100%);
+        white-space: normal;
+    }
+
+    .cnt-box-info .cnt-info > div > span:last-child {
+        font-size: 14px;
+    }
+
+    .cnt-box-info .cnt-info > div > span:first-child {
+        font-size: 11px;
+    }
+}
